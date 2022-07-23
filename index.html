@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Queens Genetic Algortihm</title>
+    <meta name="description" content="An implementation of the genetic algorithm on the n-queens problem.">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <meta property="og:title" content="N-Queens Genetic Algortihm"/>
+    <meta property="og:description" content="An implementation of the genetic algorithm on the n-queens problem.">
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://faisalalzahrani.github.io/n-queens-genalg/"/>
+</head>
+<body>
+    <div class="container">
+        <div class="chessboard-and-info">
+            <div id="main-chessboard" class="chessboard">
+
+            </div>
+
+            <div class="info-container">
+                <p id="generation-count" class="info-label">Generation: N/A</p>
+                <p class="info-label">Status: <span id="state-status" class="info-label inline">N/A</span></p>
+            </div>
+        </div>
+
+        <div id="actions-and-options">
+            <div class="option-container">
+                <label class="option-label">Chessboard Size</label>
+                <input type="range" min="4" max="50" value="8" onchange="updateChessboard()" oninput="this.nextElementSibling.value = this.value" id="chessboard-field" class="size-field">
+                <output class="size-indicator">8</output>
+            </div>
+
+            <div class="option-container" style="visibility:hidden" >
+                <label class="option-label" >Population Size</label>
+                <input id="population-field" type="text" class="option-field" placeholder="e.g., 50" value="50" spellcheck="false" required>
+            </div>
+
+            <div class="option-container" style="visibility:hidden">
+                <label class="option-label">Mutation Rate</label>
+                <input id="mutation-field" type="text" class="option-field" placeholder="e.g., 0.8" value="0.8" spellcheck="false" required>
+            </div>
+
+            <div class="option-container" style="visibility:hidden">
+                <label class="option-label">Maximum Number of Generations</label>
+                <input id="iterations-field" type="text" class="option-field" placeholder="e.g., 10000" value="10000" spellcheck="false" required>
+            </div>
+
+            <button id="action" class="action">Start</button>
+        </div>
+    </div>
+
+    <script src="js/genalg.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
